@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	<title>Nick Web Page</title>
+	<style type="text/css">
+	.box{
+		
+		width:500px;
+		height:380px;
+		
+		border:2px solid #00e6ac;
+	}
+	
+	h4 {
+		font-weight:bold
+	}
+	
+	.static {
+		position: static;
+	}
+	.relative1 {
+		position: relative;
+	}
+	.relative2 {
+		position: relative;
+		top: -20px;
+		left: 20px;
+		background-color: #e6ffee;
+		width: 500px;
+	}
+	
+	.fixed{
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		width: 260px;
+		border:2px solid #00e6ac;
+	}
+	
+	.relative{
+		position:relative;
+	}
+	
+	.absolute{
+		position:absolute;
+		width:300px;
+		height:230px;
+		border:2px solid #ff1a8c;
+		top:130px;
+		right:0;
+	}
+	
+	.keypoint{
+		font-weight:bold;
+		color:red;
+	}
+	
+	.code{
+		background-color:#ECECEC;
+	}
+	</style>
+</head>
+<body>	
+	<div class="box static">
+		<h4>static</h4>
+		<br/>
+		<span class="code">static</span> 是預設值。任何套用 <span class="code">position: static;</span> 的元素「不會被特別定位」在頁面上特定位置，而是照著瀏覽器預設的配置自動排版在頁面上，所有其他的屬性值都代表該元素會被定位在頁面上。
+	</div>
+	
+	<p/>
+	
+	<div class="box relative1">
+		<h4>relative1</h4>
+		<br/>
+		<span class="code">relative</span> 表現的和 <span class="code">static</span> 一樣，除非你增加了一些額外的屬性。
+	</div>
+	
+	<div class="box relative2">
+		<h4>relative2</h4>
+		<br/>
+		在一個設定為 <span class="code">position: relative</span> 的元素內設定 <span class="code">top</span> 、 <span class="code">right</span> 、 <span class="code">bottom</span> 和 <span class="code">left</span> 屬性，會使其元素「相對地」調整其原本該出現的所在位置，而不管這些「相對定位」過的元素如何在頁面上移動位置或增加了多少空間，都不會影響到原本其他元素所在的位置。
+		<p/>
+		<span class="keypoint">該例子設定top:-20;left:20px</span>
+	</div>
+	
+	<div class="fixed">
+		<h4>fixed</h4>
+		固定定位<span class="code">（position: fixed）</span>的元素會相對於瀏覽器視窗來定位
+		即便頁面捲動，它還是會固定在相同的位置
+	</div>
+	
+	<div class="box relative">
+		<h4>relative</h4>
+		這個元素是相對定位的，如果它是 <span class="code">position: static;</span>，那麼它的子元素如果套用「絕對定位」的話，就會跳過它，並直接參考 body 元素的相對位置。
+		
+		<div class="absolute">
+			<h4>absolute</h4>
+			這個元素被設定成絕對定位<span class="code">（position: absolute;）</span>，它會相對於它的父元素進行定位（相對於父元素的絕對定位）。
+			<p/>
+			如果上層容器並沒有「可以被定位」的元素的話，那麼這個元素的定位就是相對於該網頁所有內容（也就是 body 元素）最左上角的絕對位置
+		</div>
+	</div>
+	
+</body>
+</html>
