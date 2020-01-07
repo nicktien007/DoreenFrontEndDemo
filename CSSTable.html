@@ -10,6 +10,7 @@ body {
 table{
 	//border:1px solid #000000;
     width:500px;
+	/*表格格線設為：collapse*/
     border-collapse:collapse;
 }
 
@@ -18,11 +19,13 @@ td{
     padding:10px;
 }
 
+/*選擇該元素(tr)的第一對元素*/
 tr:nth-child(1){
 	background-color:#66cc99;
     color:#ecf9f2;
 }
 
+/*選擇偶數列*/
 tr:nth-child(even){
 	background-color:#f2f2f2;    
 }
