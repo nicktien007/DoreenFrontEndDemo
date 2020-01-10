@@ -11,28 +11,52 @@
 		border 1px solid black;				
 	}
 	
-	.title {
+	h3 {
 		font-weight:bold;
 		color: #4CAF50;
 		font-size:20px;
 	}
+	body{
+		font-size:18px;
+		color:pink;
+	}
 	
+	div.content{
+		padding:10px;
+		margin:15px;
+		color:blue;
+	}
+	.dd{
+		border:20px yellow dotted;
+		
+	}
+	#btn{
+		border:10px blue dotted;
+		background-color:#0fef98;
+		padding:10px;
+	}
 	</style>
 </head>
 <body>
 	<h3>Hello World!!-Qoo</h3>
 	
-	<img src=".\img\20190630_175450.jpg" width="300"/><br/>	
+	<div class="dd">
+		<img src=".\img\20190630_175450.jpg" width="300"/>
+	</div>
+	<div>
+	<br/>	
 	<hr/>
 	
 	<h3>我的興趣</h3>
-	<ul>
+	<ul class="content">
 		<li><a href="https://tw.iqiyi.com/">追劇</a></li>
 		<li><i><u>看書</u></i></li>
 		<li><b>看妹子</b></li>
-	</ul>	
+	</ul>
+	
 	<h3>信用卡比較</h3>
-	<table border="1" width="300">
+	<div class="content">
+		<table border="1" width="300">
 		<tr>
 			<td>發卡銀行</td>
 			<td>卡別</td>
@@ -48,6 +72,10 @@
 			<td>COCO</td>
 			<td>爛</td>
 		</tr>
-	</table>	
+	</table>
+	</div>
+	
+	<h3>聯絡我</h3>
+	<input type="text"><button id="btn">送出</button>
 </body>
 </html>
