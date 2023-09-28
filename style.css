@@ -1,0 +1,12 @@
+.title{
+    color: red
+}
+
+.content{
+    border: 1px solid blue;width: 40%;
+    margin-top: 20px;
+}
+
+.keyword{
+    color: red;
+}
